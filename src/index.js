@@ -40,9 +40,9 @@ app.get('/api', (req, res) => {
 });
 app.listen(port, async(req, res) => {
     try {
-        // await sequelize.drop();
+        await sequelize.drop();
         await sequelize.sync();
-        //  await rellenarDB(sequelize);
+         await rellenarDB(sequelize);
         console.log('Base de datos conectada')
     } catch (e) {
         console.log('No se pudo conectar a la base de datos', e)
