@@ -41,7 +41,7 @@ app.get('/api', (req, res) => {
 app.listen(port, async(req, res) => {
     try {
         // await sequelize.drop();
-        await sequelize.authenticate();
+        await sequelize.sync();
         //  await rellenarDB(sequelize);
         console.log('Base de datos conectada')
     } catch (e) {
@@ -49,4 +49,3 @@ app.listen(port, async(req, res) => {
     }
 });
 module.exports.app = app;
-// AUTENTICAR ["TOKEN"]

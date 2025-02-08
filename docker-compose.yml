@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=metzi_dev
+      - MYSQL_USER=metzi_dev
+      - MYSQL_PASSWORD=12345678
+    ports:
+      - 3307:3306
